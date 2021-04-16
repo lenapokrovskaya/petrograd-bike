@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Petrograd Bike</title>
+  <link rel="preload" href="fonts/soviet-font.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-commons-trial-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-commons-trial-bold-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-commons-trial-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <p>!!</p>
+
+<body class="page-body">
+  <header class="page-header">
+    <div class="page-header__container">
+      <a class="page-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo.svg">
+          <img class="page-header__logo-img" src="img/logo-mobile.svg" width="125" height="30" alt="Petrograd Bike">
+        </picture>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#advantages">
+              Преимущества
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#video">
+              Видео
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Велосипед Petrograd Bike</h1>
+    <section class="intro">
+      <div class="intro__wrapper">
+        <p class="intro__description">
+          Быстрый. Дерзкий
+        </p>
+        <h2 class="intro__title">Велосипед советский</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/bike.png">
+          <img class="intro__img" src="img/bike-mobile.png" alt="Велосипед" width="325" height="387">
+        </picture>
+        <a class="button intro__button-order" href="#">Заказать</a>
+      </div>
+    </section>
+
+    <section class="video" id="video">
+      <h2>Видeo</h2>
+      <video preload="auto" autoplay muted loop width="330" height="441">
+        <source src="img/video.mp4" type="video/mp4">
+      </video>
+      <button class="video__button">Смотреть видео</button>
+    </section>
+
+    <section class="product" id="advantages">
+      <h2>Велосипед</h2>
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/bike-product.png">
+        <img class="product__img" src="img/bike-mobile.png" alt="Велосипед советский" width="307" height="367">
+      </picture>
+      <button class="product__button">Перейти к товару</button>
+    </section>
+
+    <section class="form" id="contacts">
+      <h2>Оставить заявку</h2>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <input class="form__input" type="text" name="name" id="your-name" placeholder="Ваше имя">
+        <label class="visually-hidden" for="your-name">Введите ваше имя</label>
+        <input class="form__input" placeholder="+7___-___-__-__" type="tel" name="phone" id="your-phone">
+        <label class="visually-hidden" for="your-phone">Введите ваш телефон</label>
+        <button class="form__button">Отправить</button>
+        <input class="form__checkbox" type="checkbox" name="user-consent" id="agreement">
+        <label for="agreement">Нажимая на кнопку «Отправить» вы соглашаетесь с нашей политикой
+          конфиденциальности</label>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__copyright copyright">&copy;Свобода. Равенство. Братство</p>
+    <p class="page-footer__developed developed">Сделано в <a href="https://petrogradweb.ru/">PetrogradWeb</a></p>
+  </footer>
+
 </body>
+
 </html>
