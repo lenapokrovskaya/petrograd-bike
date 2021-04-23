@@ -1,0 +1,78 @@
+.form
+  background-color: $basic-sand
+ 
+
+.form__content
+  display: flex
+  flex-direction: column
+  padding-bottom: 141px
+  @media (min-width: $desktop-width)
+    width: 49.2%
+
+@media (min-width: $desktop-width) 
+  .form__wrapper
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+.form__title
+  font-family: Soviet Font
+  font-weight: 400
+  font-style: normal
+  font-size: 40px
+  line-height: 60px
+  margin: 0
+  margin-bottom: 40px
+  padding-top: 176px
+  text-align: center
+  letter-spacing: 0.02em
+  @media (min-width: $desktop-width) 
+    font-size: 60px
+    line-height: 150px
+
+@media (min-width: $desktop-width) 
+  .form__button-submit-wrapper
+    display: flex
+    align-items: center
+    gap: 2%
+    
+
+.form__button-submit
+  display: flex
+  align-self: center
+  flex-wrap: wrap
+  font-size: 20px
+  line-height: 23px
+  color: $basic-grey
+  background: $basic-red
+  justify-content: center
+  width: 355px
+  padding: 20px 13px 22px 8px
+  outline: none
+  border: none
+  margin-top: 30px
+  margin-bottom: 12px
+  &:hover
+    box-shadow: 6px 6px 0px 0px $dark-red
+  &:active
+    background-color: $dark-red
+    box-shadow: none
+
+@media (min-width: $desktop-width)
+  .form__button-submit
+    padding: 19px 45px 15px 45px
+    width: 31%;
+
+
+
+.form__input
+  background-color: $basic-grey
+  border: 1px solid $basic-light-brown
+  padding: 18px 20px 18px 17px
+  margin-bottom: 10px
+  outline: none
+  font-size: 20px
+  line-height: 100%
+  &:hover
+    border: 1px solid $basic-black

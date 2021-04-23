@@ -1,0 +1,106 @@
+.intro
+  background: linear-gradient(190deg, rgb(241, 231, 212) 73%, rgb(252, 0, 0) 7%)
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 100px
+  @media (min-width: $desktop-width)
+    background: linear-gradient(101deg, rgb(241, 231, 212) 73%, rgb(252, 0, 0) 7%)
+
+.intro__wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  @media (min-width: $desktop-width)
+    display: grid
+    grid-template-columns: 1fr max-content
+
+.intro__content
+  display: flex
+  flex-direction: column
+  align-items: center
+  @media (min-width: $desktop-width)
+    align-items: flex-start
+  
+.intro__description 
+  font-style: italic
+  font-size: 20px
+  line-height: 23px
+  color: $basic-red
+  margin: 0
+  margin-bottom: 10px
+
+.intro__title
+  font-family: Soviet Font
+  font-weight: 400
+  font-style: normal
+  font-size: 40px
+  line-height: 60px
+  letter-spacing: 2%
+  margin: 0
+  margin-bottom: 30px
+  text-align: center
+  @media (min-width: $desktop-width)
+    font-size: 100px
+    line-height: 150px
+    text-align: left
+
+
+.intro__button-order
+  display: flex
+  flex-wrap: wrap
+  background: $basic-red
+  justify-content: center
+  width: 201px
+  border-radius: 2px
+  transform: skewX(-30deg)
+  padding: 20px 13px 22px 8px
+  margin-bottom: 60px
+  &:hover
+    box-shadow: 6px 6px 0px 0px $dark-red
+  &:active
+    background-color: $dark-red
+    box-shadow: none
+    
+
+.intro__button-order span
+  font-size: 20px
+  line-height: 23px
+  color: $basic-grey
+  display: flex
+  transform: skewX(30deg)
+  text-transform: uppercase
+
+
+@media (min-width: $desktop-width)
+  .intro__img-container
+    position: relative
+    right: 60px
+
+.intro__img
+  display: block
+  width: 325px
+  height: 387px
+  @media (min-width: $desktop-width)
+    width: 598px
+    height: 712px   
+
+.intro__img-container
+  position: relative
+
+.intro__img-container:before
+  position: absolute
+  content: ""
+  top: 180px
+  right: -20px
+  width: 365px
+  height: 253px
+  background-image: url("../img/bike-shadow.png")
+  opacity: 0.5
+  @media (min-width: $desktop-width)
+    top: 280px
+    right: -20px
+    width: 870px
+    height: 465px
+    background-image: url("../img/bike-shadow-desktop.png")
+    opacity: 0.5

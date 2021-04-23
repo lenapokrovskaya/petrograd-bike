@@ -15,6 +15,13 @@ const uglify = require('gulp-uglify-es').default;
 // Подключаем модули gulp-sass и gulp-less
 const sass = require('gulp-sass');
 const less = require('gulp-less');
+
+// Подключаем sprite svg
+
+const svgstore = require("gulp-svgstore");
+
+// Подключаем gulp-rename
+const rename = require("gulp-rename");
  
 // Подключаем Autoprefixer
 const autoprefixer = require('gulp-autoprefixer');
@@ -39,7 +46,7 @@ function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
 		server: { baseDir: 'source/' }, // Указываем папку сервера
 		notify: false, // Отключаем уведомления
-		online: true // Режим работы: true или false
+		online: false // Режим работы: true или false
 	})
 }
 
@@ -63,7 +70,7 @@ watch(['source/**/*.js', '!source/**/*.min.js'], scripts);
 watch('source/**/' + preprocessor + '/**/*', styles);
 
 // Мониторим файлы HTML на изменения
-watch('app/**/*.html').on('change', browserSync.reload);
+watch('source/**/*.html').on('change', browserSync.reload);
 
 }
 
@@ -77,14 +84,21 @@ function styles() {
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 ////////////
-
-/////////////
+// function sprite() {
+//   return src('source/img/**/icon-*.svg')
+//     .pipe(svgstore())
+//     .pipe(rename('sprite.svg'))
+//     .pipe(dest('build/img/'))
+// }
+// exports.sprite = sprite;
+// /////////////
 
 
 function buildcopy() {
 	return src([ // Выбираем нужные файлы
 		'source/css/**/*.min.css',
 		'source/js/**/*.min.js',
+		'source/img/**/*',
 		'source/**/*.html',
 		], { base: 'source' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('build')) // Выгружаем в папку с финальной сборкой
