@@ -99,6 +99,7 @@ function buildcopy() {
 		'source/css/**/*.min.css',
 		'source/js/**/*.min.js',
 		'source/img/**/*',
+		'source/fonts/**/*',
 		'source/**/*.html',
 		], { base: 'source' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('docs')) // Выгружаем в папку с финальной сборкой
