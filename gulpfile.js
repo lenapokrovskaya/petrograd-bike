@@ -101,11 +101,11 @@ function buildcopy() {
 		'source/img/**/*',
 		'source/**/*.html',
 		], { base: 'source' }) // Параметр "base" сохраняет структуру проекта при копировании
-	.pipe(dest('build')) // Выгружаем в папку с финальной сборкой
+	.pipe(dest('docs')) // Выгружаем в папку с финальной сборкой
 }
 
 function cleandist() {
-	return del('build/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
+	return del('docs/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
 }
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
